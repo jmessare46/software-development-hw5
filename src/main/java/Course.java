@@ -1,3 +1,5 @@
+import org.apache.log4j.Logger;
+
 public class Course {
     private String name;
     private String subject;
@@ -63,7 +65,8 @@ public class Course {
             System.out.println("Subject: " + getSubject());
             System.out.println("University: " + getUniversity().getName());
         } catch (Exception e) {
-            //TODO: Log information here
+            Logger logger = Logger.getLogger("Course Log");
+            logger.error(e.toString());
         }
     }
 }
