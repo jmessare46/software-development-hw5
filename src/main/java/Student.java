@@ -20,7 +20,18 @@ public class Student extends Person{
 
     public void printStudentInfo()
     {
-        System.out.println("Student Information");
+        System.out.println("Student Information:\n\n");
+        System.out.println("Name: " + getName());
+        System.out.println("Age: " + getAge());
+        System.out.println("Address: " + getAddress());
+        System.out.println("Phone Number: " + getPhone() + "\n");
+
+        System.out.println("Student's Courses");
+        ArrayList<Course> courses = getCourses();
+        for(int i = 0; i < courses.size(); i++)
+        {
+            courses.get(i).printCourseInfo();
+        }
     }
 
     public ArrayList<Course> getCourses() {

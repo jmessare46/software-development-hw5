@@ -12,7 +12,7 @@ public class TeacherTest {
     {
         this.teacher = new Teacher(1, "Liu");
         Course software_development = new Course("Software Development", 1, "Computer Science");
-        ArrayList<Course> classes = new ArrayList<>();
+        ArrayList<Course> classes = new ArrayList<Course>();
         classes.add(software_development);
         this.teacher.setClasses(classes);
     }

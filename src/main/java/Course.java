@@ -54,4 +54,16 @@ public class Course {
     public void setUniversity(College university) {
         this.university = university;
     }
+
+    public void printCourseInfo()
+    {
+        try {
+            System.out.println("Course Information\n\n");
+            System.out.println("Course: " + getClassName());
+            System.out.println("Subject: " + getSubject());
+            System.out.println("University: " + getUniversity().getName());
+        } catch (Exception e) {
+            //TODO: Log information here
+        }
+    }
 }
