@@ -41,14 +41,6 @@ public class Course {
         this.id = id;
     }
 
-    public String getClassName() {
-        return name;
-    }
-
-    public void setClassName(String name) {
-        this.name = name;
-    }
-
     public College getUniversity() {
         return university;
     }
@@ -61,7 +53,7 @@ public class Course {
     {
         try {
             System.out.println("Course Information\n\n");
-            System.out.println("Course: " + getClassName());
+            System.out.println("Course: " + getCourseName());
             System.out.println("Subject: " + getSubject());
             System.out.println("University: " + getUniversity().getName());
         } catch (Exception e) {
