@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Student extends Person{
+public class Student extends Person implements Registration{
 
     private String department;
     private ArrayList<Course> courses;
@@ -40,5 +40,13 @@ public class Student extends Person{
 
     public void setCourses(ArrayList<Course> courses) {
         this.courses = courses;
+    }
+
+    /**
+     * Adds a course to the students class list
+     */
+    public boolean register(Course course) {
+        courses.add(course);
+        return true;
     }
 }
